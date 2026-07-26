@@ -79,9 +79,12 @@ ul {
   display: inline-block;
   padding: 14px 32px;
   border-radius: 999px;
+  border: none;
   font-size: 0.95rem;
+  font-family: inherit;
   letter-spacing: 0.05em;
   text-align: center;
+  cursor: pointer;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -98,6 +101,15 @@ ul {
   background-color: transparent;
   color: var(--color-primary-dark);
   border: 1px solid var(--color-primary);
+}
+
+.btn[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn[aria-disabled="true"]:hover {
+  opacity: 0.6;
 }
 
 /* ==========================================================================
