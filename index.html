@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hair & beauty LUMIÈRE（ルミエール）| 表参道の美容室</title>
+<meta name="description" content="表参道の美容室 LUMIÈRE（ルミエール）。髪と心に、静かなツヤを。カット・カラー・トリートメントで、あなたらしい美しさを引き出します。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="header">
+  <div class="container header__inner">
+    <a href="#top" class="logo">LUMIÈRE</a>
+    <nav class="nav">
+      <button class="nav__toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__list" id="navList">
+        <li><a href="#features">サロンの特徴</a></li>
+        <li><a href="#menu">メニュー・料金</a></li>
+        <li><a href="#access">アクセス</a></li>
+        <li><a href="#reserve" class="nav__cta">ご予約</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- メインビジュアル -->
+<section id="top" class="hero">
+  <div class="container hero__inner">
+    <p class="hero__sub">OMOTESANDO HAIR SALON</p>
+    <h1 class="hero__title">髪に、光を。<br>心に、余白を。</h1>
+    <p class="hero__text">一人ひとりの髪質と骨格に合わせたカウンセリングで、<br class="hero__br">"なりたい"をそっと引き出すサロンです。</p>
+    <a href="#reserve" class="btn btn--primary">ご予約はこちら</a>
+  </div>
+</section>
+
+<!-- サロンの特徴 -->
+<section id="features" class="features">
+  <div class="container">
+    <h2 class="section-title">サロンの特徴</h2>
+    <ul class="features__grid">
+      <li class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">✂️</div>
+        <h3 class="feature-card__title">丁寧なカウンセリング</h3>
+        <p class="feature-card__text">お悩みやなりたいイメージをじっくりお伺いし、髪質・骨格に合わせたご提案をいたします。</p>
+      </li>
+      <li class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">🌿</div>
+        <h3 class="feature-card__title">こだわりの薬剤</h3>
+        <p class="feature-card__text">頭皮と髪にやさしい低刺激の薬剤を厳選。カラーやパーマも安心してお楽しみいただけます。</p>
+      </li>
+      <li class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">🛋️</div>
+        <h3 class="feature-card__title">くつろぎの空間</h3>
+        <p class="feature-card__text">完全個室感覚のセット面と落ち着いた照明で、施術中もリラックスしてお過ごしいただけます。</p>
+      </li>
+      <li class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true">💇</div>
+        <h3 class="feature-card__title">経験豊富なスタイリスト</h3>
+        <p class="feature-card__text">指名率の高いスタイリストが多数在籍。どんな髪の悩みも安心してお任せください。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- メニュー・料金 -->
+<section id="menu" class="menu">
+  <div class="container">
+    <h2 class="section-title">メニュー・料金</h2>
+    <div class="menu__table-wrap">
+      <table class="menu__table">
+        <thead>
+          <tr>
+            <th>メニュー</th>
+            <th>内容</th>
+            <th>料金（税込）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="メニュー">カット</td>
+            <td data-label="内容">シャンプー・ブロー込み</td>
+            <td data-label="料金（税込）">¥5,500〜</td>
+          </tr>
+          <tr>
+            <td data-label="メニュー">カラー</td>
+            <td data-label="内容">全体染め・トリートメント込み</td>
+            <td data-label="料金（税込）">¥8,800〜</td>
+          </tr>
+          <tr>
+            <td data-label="メニュー">パーマ</td>
+            <td data-label="内容">デザイン提案・カット込み</td>
+            <td data-label="料金（税込）">¥9,900〜</td>
+          </tr>
+          <tr>
+            <td data-label="メニュー">トリートメント</td>
+            <td data-label="内容">髪質改善集中ケア</td>
+            <td data-label="料金（税込）">¥6,600〜</td>
+          </tr>
+          <tr>
+            <td data-label="メニュー">カット＋カラー</td>
+            <td data-label="内容">人気No.1セットメニュー</td>
+            <td data-label="料金（税込）">¥12,800〜</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="menu__note">※ 髪の長さ・デザインにより料金が変動する場合がございます。詳しくはお問い合わせください。</p>
+  </div>
+</section>
+
+<!-- アクセス・予約導線 -->
+<section id="access" class="access">
+  <div class="container access__inner">
+    <div class="access__info">
+      <h2 class="section-title section-title--left">アクセス</h2>
+      <dl class="access__list">
+        <div class="access__row">
+          <dt>店名</dt>
+          <dd>hair &amp; beauty LUMIÈRE（ルミエール）</dd>
+        </div>
+        <div class="access__row">
+          <dt>住所</dt>
+          <dd>〒150-0001 東京都渋谷区神宮前1-2-3 LUMIÈREビル 3F</dd>
+        </div>
+        <div class="access__row">
+          <dt>最寄駅</dt>
+          <dd>表参道駅 A2出口より徒歩3分</dd>
+        </div>
+        <div class="access__row">
+          <dt>営業時間</dt>
+          <dd>10:00〜19:00（最終受付 18:00）</dd>
+        </div>
+        <div class="access__row">
+          <dt>定休日</dt>
+          <dd>毎週火曜日・年末年始</dd>
+        </div>
+        <div class="access__row">
+          <dt>電話番号</dt>
+          <dd><a href="tel:0312345678">03-1234-5678</a></dd>
+        </div>
+      </dl>
+    </div>
+
+    <div id="reserve" class="access__reserve">
+      <h3 class="access__reserve-title">ご予約はこちらから</h3>
+      <p class="access__reserve-text">お電話・Web予約フォームより承っております。<br>初めての方もお気軽にどうぞ。</p>
+      <a href="tel:0312345678" class="btn btn--outline">電話で予約する</a>
+      <a href="#" class="btn btn--primary">Web予約フォームへ</a>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__logo">LUMIÈRE</p>
+    <p class="footer__copy">&copy; 2026 hair &amp; beauty LUMIÈRE All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navList = document.getElementById('navList');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navList.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+</body>
+</html>

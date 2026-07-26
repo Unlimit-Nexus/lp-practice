@@ -1,0 +1,467 @@
+/* ==========================================================================
+   共通設定
+   ========================================================================== */
+:root {
+  --color-bg: #faf7f4;
+  --color-bg-alt: #ffffff;
+  --color-text: #3a332e;
+  --color-text-sub: #7a7168;
+  --color-primary: #b98a6a;
+  --color-primary-dark: #96694c;
+  --color-border: #e6ddd3;
+  --max-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  letter-spacing: 0.05em;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background-color: var(--color-primary);
+  margin: 16px auto 0;
+}
+
+.section-title--left {
+  text-align: left;
+}
+
+.section-title--left::after {
+  margin: 16px 0 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary);
+}
+
+/* ==========================================================================
+   ヘッダー
+   ========================================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(250, 247, 244, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  color: var(--color-primary-dark);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav__list a {
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+.nav__cta {
+  padding: 10px 22px;
+  border-radius: 999px;
+  background-color: var(--color-primary);
+  color: #fff !important;
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+}
+
+/* ==========================================================================
+   メインビジュアル
+   ========================================================================== */
+.hero {
+  background: linear-gradient(135deg, #f3e9e0 0%, #faf7f4 60%);
+  padding: 120px 0;
+  text-align: center;
+}
+
+.hero__sub {
+  color: var(--color-primary-dark);
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  margin-bottom: 28px;
+}
+
+.hero__text {
+  color: var(--color-text-sub);
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+/* ==========================================================================
+   サロンの特徴
+   ========================================================================== */
+.features {
+  padding: 100px 0;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.feature-card {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.feature-card__icon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.feature-card__title {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  letter-spacing: 0.03em;
+}
+
+.feature-card__text {
+  font-size: 0.9rem;
+  color: var(--color-text-sub);
+}
+
+/* ==========================================================================
+   メニュー・料金
+   ========================================================================== */
+.menu {
+  padding: 100px 0;
+  background-color: var(--color-bg-alt);
+}
+
+.menu__table-wrap {
+  overflow-x: auto;
+}
+
+.menu__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+.menu__table th,
+.menu__table td {
+  padding: 18px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menu__table th {
+  color: var(--color-primary-dark);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+.menu__table td:last-child,
+.menu__table th:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.menu__note {
+  margin-top: 24px;
+  font-size: 0.8rem;
+  color: var(--color-text-sub);
+}
+
+/* ==========================================================================
+   アクセス・予約導線
+   ========================================================================== */
+.access {
+  padding: 100px 0;
+}
+
+.access__inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.access__list {
+  border-top: 1px solid var(--color-border);
+}
+
+.access__row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.92rem;
+}
+
+.access__row dt {
+  color: var(--color-text-sub);
+}
+
+.access__reserve {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.access__reserve-title {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  letter-spacing: 0.03em;
+}
+
+.access__reserve-text {
+  font-size: 0.9rem;
+  color: var(--color-text-sub);
+  margin-bottom: 28px;
+}
+
+.access__reserve .btn {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.access__reserve .btn:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   フッター
+   ========================================================================== */
+.footer {
+  background-color: #2f2a26;
+  color: #cfc6bd;
+  padding: 48px 0;
+  text-align: center;
+}
+
+.footer__logo {
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.footer__copy {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   レスポンシブ（タブレット）
+   ========================================================================== */
+@media (max-width: 900px) {
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .access__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* ==========================================================================
+   レスポンシブ（スマホ）
+   ========================================================================== */
+@media (max-width: 640px) {
+  .hero {
+    padding: 88px 0;
+  }
+
+  .hero__br {
+    display: none;
+  }
+
+  .features,
+  .menu,
+  .access {
+    padding: 64px 0;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__list {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background-color: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav__list.is-open {
+    max-height: 320px;
+  }
+
+  .nav__list li {
+    width: 100%;
+  }
+
+  .nav__list a {
+    display: block;
+    padding: 16px 24px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav__cta {
+    border-radius: 0;
+  }
+
+  .menu__table {
+    min-width: 0;
+  }
+
+  .menu__table thead {
+    display: none;
+  }
+
+  .menu__table tr {
+    display: block;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .menu__table td {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    padding: 6px 0;
+  }
+
+  .menu__table td::before {
+    content: attr(data-label);
+    color: var(--color-text-sub);
+    font-size: 0.8rem;
+  }
+
+  .menu__table td:last-child {
+    text-align: right;
+  }
+}
